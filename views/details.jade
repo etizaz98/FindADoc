@@ -1,0 +1,32 @@
+extends layout
+
+block content
+
+	a(href='/doctors') &lt; Go Back
+	br
+	br
+	.details
+		h2 #{doctor.full_name}
+		| &#x9;
+		h4 Physical Information
+		| &#x9;
+		ul.doc-info
+			li Full Name:#{doctor.full_name}
+			| &#x9;&#x9;
+			li Accepting New Patients:#{doctor.new_patients}
+			| &#x9;&#x9;
+			li Speciality/Category:#{doctor.category}
+			| &#x9;&#x9;
+			li Graduation Year:#{doctor.graduation_year}
+		| &#x9;
+		h4 Pracise Information
+		| &#x9;
+		ul.practise-info
+			li #{doctor.practice_name}
+			| &#x9;&#x9;
+			li Address:#{doctor.street_adress} #{doctor.city} #{doctor.state},#{doctor.zip}
+			| &#x9;&#x9;
+		br
+		br
+
+
